@@ -1,0 +1,24 @@
+{%- comment -%}
+  LLM-Graph web profile snippet for Shopify.
+{%- endcomment -%}
+
+<script type="application/llm-graph+json">
+{
+  "version": "0.2.0",
+  "profile": "web",
+  "site": {
+    "id": "shopify-store",
+    "name": {{ shop.name | json }},
+    "url": {{ shop.url | json }},
+    "description": {{ shop.meta_description | json }}
+  },
+  "pages": [
+    {
+      "id": "homepage",
+      "url": "/",
+      "title": "Homepage",
+      "purpose": "Browse products"
+    }
+  ]
+}
+</script>
